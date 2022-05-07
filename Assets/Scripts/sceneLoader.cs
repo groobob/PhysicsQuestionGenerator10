@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class sceneLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
- 
-    void LoadNextScene()
+    public void LoadNextScene()
     {
-        
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene + 1);
     }
-    void Update()
+    public void CloseProgram()
     {
-        
+        Application.Quit();
     }
 }
