@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TopicSelector.unity
     guid: e003653082a0b464caef8ae3560af81b
+  - enabled: 1
+    path: Assets/Scenes/DefinitionList.unity
+    guid: bee2013fb5515fd47899b37ea99a521b
   m_configObjects: {}

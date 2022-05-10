@@ -891,6 +891,7 @@ GameObject:
   - component: {fileID: 1979819931}
   - component: {fileID: 1979819930}
   - component: {fileID: 1979819933}
+  - component: {fileID: 1979819934}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -958,6 +959,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1908b4bc9464d1f45880ddfdecedc2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1979819934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979819929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f5630e8c938034bb5e1387bb9ead7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 878147477}
+  toggle: {fileID: 1095942900092647672, guid: e2e202380c3b3e146a01eb0b86381bf9, type: 3}
+  Sets:
+  - enabled: 1
+    questions: []
+  - enabled: 1
+    questions: []
+  - enabled: 1
+    questions: []
+  - enabled: 1
+    questions: []
 --- !u!1 &2083118539
 GameObject:
   m_ObjectHideFlags: 0
