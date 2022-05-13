@@ -10,14 +10,6 @@ public class SceneLoader : MonoBehaviour
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene + 1);
     }
-    public void LoadDefinitionList()
-    {
-        SceneManager.LoadScene(3);
-    }
-    public void LoadMainScene()
-    {
-        SceneManager.LoadScene(1);
-    }
     public void CloseProgram()
     {
         Application.Quit();

@@ -8,25 +8,36 @@ public class SetManager : MonoBehaviour
     [SerializeField] GameObject canvas;
     [SerializeField] Toggle toggle;
     public Selected[] Sets;
-    void Start()
+    private bool isInstantiated = false;
+    public void CreateToggles()
     {
-        for(int i = 0; i < Sets.Length; i++)
+        if(isInstantiated == false)
         {
-            int c = i;
-            Toggle a = Instantiate(toggle, transform.position, Quaternion.identity, canvas.transform);
-            a.onValueChanged.AddListener((b)  => OnToggle(c, b));
-            a.isOn = true;
+
+            for(int i = 0; i < Sets.Length; i++)
+            {
+                int toggleNumber = i;
+                Toggle instantiatedToggle = Instantiate(toggle, transform.position, Quaternion.identity, canvas.transform);
+                instantiatedToggle.onValueChanged.AddListener((toggleEnabled)  => OnToggle(toggleNumber, toggleEnabled));
+                instantiatedToggle.isOn = Sets[i].enabled;
+            }
+            isInstantiated = true;
+        }
+        else if(isInstantiated == true)
+        {
+            isInstantiated = false;
         }
     }
     public void OnToggle(int index, bool toggled)
     {
-        Debug.Log($"{index} {toggled}");
+
         Sets[index].enabled = toggled;
     }
 }
 [System.Serializable]
 public class Selected
 {
+    public string name;
     public bool enabled;
     public string[] questions;
 }

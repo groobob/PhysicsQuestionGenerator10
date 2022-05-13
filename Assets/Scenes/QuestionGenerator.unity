@@ -974,13 +974,14 @@ MonoBehaviour:
   canvas: {fileID: 878147477}
   toggle: {fileID: 1095942900092647672, guid: e2e202380c3b3e146a01eb0b86381bf9, type: 3}
   Sets:
-  - enabled: 1
+  - name: 
+    enabled: 1
     questions: []
-  - enabled: 1
+  - name: 
+    enabled: 0
     questions: []
-  - enabled: 1
-    questions: []
-  - enabled: 1
+  - name: 
+    enabled: 1
     questions: []
 --- !u!1 &2083118539
 GameObject:
@@ -1065,9 +1066,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979819933}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 1979819934}
+        m_TargetAssemblyTypeName: SetManager, Assembly-CSharp
+        m_MethodName: CreateToggles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
