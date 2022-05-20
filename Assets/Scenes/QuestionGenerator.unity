@@ -284,7 +284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 76850920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1979819934}
+        m_TargetAssemblyTypeName: SetManager, Assembly-CSharp
+        m_MethodName: GenerateQuestion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &76850920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,16 +985,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 878147477}
   toggle: {fileID: 1095942900092647672, guid: e2e202380c3b3e146a01eb0b86381bf9, type: 3}
+  generatedText: {fileID: 215720355}
   Sets:
-  - name: 
+  - name: test 1
     enabled: 1
-    questions: []
-  - name: 
-    enabled: 0
-    questions: []
-  - name: 
+    questions:
+    - test 1.1
+    - test 1.2
+    - test 1.3
+  - name: test 2
     enabled: 1
-    questions: []
+    questions:
+    - test 2.1
+    - test 2.2
+    - test 2.3
+  - name: test 3
+    enabled: 1
+    questions:
+    - test 3.1
+    - test 3.2
+    - test 3.3
 --- !u!1 &2083118539
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class SetManager : MonoBehaviour
 {
     [SerializeField] GameObject canvas;
     [SerializeField] Toggle toggle;
+    [SerializeField] Text generatedText;
     public Selected[] Sets;
     private bool isInstantiated = false;
     public void CreateToggles()
@@ -32,6 +33,19 @@ public class SetManager : MonoBehaviour
     {
 
         Sets[index].enabled = toggled;
+    }
+    public void GenerateQuestion()
+    {
+        int generatedTopic = Random.Range(0, Sets.Length);
+        if(Sets[generatedTopic].enabled == true)
+        {
+            int generatedQuestion = Random.Range(0, Sets[generatedTopic].questions.Length);
+            generatedText.text = Sets[generatedTopic].questions[generatedQuestion].ToString();
+        }
+        else
+        {
+            GenerateQuestion();
+        }
     }
 }
 [System.Serializable]
